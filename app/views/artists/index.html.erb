@@ -1,0 +1,18 @@
+<h1>Artists</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Artist</th>
+            <th>Songs</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @artists.each do |artist| %>
+            <tr>
+                <td><%= artist.name %></td>
+                <td><%= pluralize(artist.songs.count, "song") %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
